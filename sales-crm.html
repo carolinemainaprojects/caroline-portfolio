@@ -1,1 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>AI Sales CRM Assistant | Caroline Wanjiku Maina</title>
+
+    <meta name="description"
+          content="AI Sales CRM Assistant project by Caroline Wanjiku Maina.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b1120;
+            color: #f8fafc;
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        nav {
+            border-bottom: 1px solid #1e293b;
+            background: #0b1120;
+        }
+
+        .nav-container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 18px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #38bdf8;
+        }
+
+        .back {
+            color: #38bdf8;
+            font-size: 0.9rem;
+        }
+
+        .hero {
+            max-width: 1000px;
+            margin: auto;
+            padding: 80px 25px 50px;
+        }
+
+        .label {
+            color: #38bdf8;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 7vw, 4.5rem);
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            color: #cbd5e1;
+            max-width: 750px;
+            font-size: 1.1rem;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 12px 20px;
+            border-radius: 8px;
+            border: 1px solid #38bdf8;
+            font-weight: bold;
+        }
+
+        .primary {
+            background: #38bdf8;
+            color: #0b1120;
+        }
+
+        .secondary {
+            color: #38bdf8;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px 25px 80px;
+        }
+
+        .screenshot {
+            width: 100%;
+            max-height: 600px;
+            object-fit: contain;
+            background: #111827;
+            border: 1px solid #1e293b;
+            border-radius: 15px;
+            margin: 20px 0 60px;
+        }
+
+        .section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 18px;
+        }
+
+        h2::before {
+            content: "";
+            display: inline-block;
+            width: 5px;
+            height: 28px;
+            background: #38bdf8;
+            margin-right: 12px;
+            vertical-align: middle;
+            border-radius: 3px;
+        }
+
+        .section p {
+            color: #cbd5e1;
+            max-width: 850px;
+        }
+
+        .workflow {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .workflow-step {
+            background: #111827;
+            border: 1px solid #1e293b;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .workflow-step strong {
+            color: #38bdf8;
+        }
+
+        .tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .tech span {
+            background: #1e293b;
+            padding: 8px 13px;
+            border-radius: 20px;
+            color: #cbd5e1;
+            font-size: 0.85rem;
+        }
+
+        .result {
+            background: #111827;
+            border: 1px solid #1e293b;
+            border-radius: 15px;
+            padding: 30px;
+        }
+
+        .result p {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            border-top: 1px solid #1e293b;
+            text-align: center;
+            padding: 30px 20px;
+            color: #64748b;
+        }
+
+        @media (max-width: 700px) {
+
+            .workflow {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-container {
+                padding: 16px 20px;
+            }
+
+            .hero {
+                padding-top: 60px;
+            }
+
+            main {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .screenshot {
+                max-height: 450px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-container">
+
+            <div class="logo">
+                Caroline<span>.</span>
+            </div>
+
+            <a href="index.html" class="back">
+                ← Back to Portfolio
+            </a>
+
+        </div>
+    </nav>
+
+
+    <header class="hero">
+
+        <div class="label">
+            PROJECT 03
+        </div>
+
+        <h1>
+            AI Sales CRM Assistant
+        </h1>
+
+        <p>
+            An AI-powered CRM workflow that captures new leads, evaluates
+            their potential, prioritizes opportunities, and stores lead
+            information in a database.
+        </p>
+
+        <div class="buttons">
+
+            <a
+                href="https://github.com/carolinemainaprojects/ai-sales-crm"
+                target="_blank"
+                class="btn primary">
+                View GitHub →
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <img
+            src="Screenshot_2026-08-30-00-38-18-86_40deb401b9ffe8e1df2f1cc5ba480b12.jpg"
+            alt="AI Sales CRM Assistant application"
+            class="screenshot">
+
+
+        <section class="section">
+
+            <h2>The Problem</h2>
+
+            <p>
+                Sales teams can receive many leads through different channels.
+                Manually reviewing, qualifying, prioritizing, and updating
+                every lead can become repetitive and make it harder to focus
+                on the most valuable opportunities.
+            </p>
+
+        </section>
+
+
+        <section class="section">
+
+            <h2>The Solution</h2>
+
+            <p>
+                I built an AI-powered Sales CRM Assistant that combines
+                lead capture, database storage, AI qualification, and
+                prioritization into one workflow.
+            </p>
+
+            <p style="margin-top: 18px;">
+                The system uses AI to evaluate incoming leads and helps
+                identify high-priority opportunities so that sales teams
+                can focus their attention where it matters most.
+            </p>
+
+        </section>
+
+
+        <section class="section">
+
+            <h2>How It Works</h2>
+
+            <div class="workflow">
+
+                <div class="workflow-step">
+                    <strong>01 — Capture</strong>
+                    <p>
+                        A new lead enters the system through a form.
+                    </p>
+                </div>
+
+                <div class="workflow-step">
+                    <strong>02 — Store</strong>
+                    <p>
+                        Lead information is stored in Supabase.
+                    </p>
+                </div>
+
+                <div class="workflow-step">
+                    <strong>03 — Qualify</strong>
+                    <p>
+                        Gemini AI evaluates the lead and determines
+                        its potential.
+                    </p>
+                </div>
+
+                <div class="workflow-step">
+                    <strong>04 — Prioritize</strong>
+                    <p>
+                        The system identifies high-priority leads
+                        for follow-up.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="section">
+
+            <h2>Key Features</h2>
+
+            <div class="workflow">
+
+                <div class="workflow-step">
+                    Lead capture form
+                </div>
+
+                <div class="workflow-step">
+                    Supabase database storage
+                </div>
+
+                <div class="workflow-step">
+                    AI lead qualification
+                </div>
+
+                <div class="workflow-step">
+                    Lead scoring
+                </div>
+
+                <div class="workflow-step">
+                    Priority identification
+                </div>
+
+                <div class="workflow-step">
+                    CRM data management
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="section">
+
+            <h2>Technology Stack</h2>
+
+            <div class="tech">
+
+                <span>Python</span>
+                <span>Gemini AI</span>
+                <span>Streamlit</span>
+                <span>Supabase</span>
+                <span>PostgreSQL</span>
+                <span>REST APIs</span>
+                <span>GitHub</span>
+
+            </div>
+
+        </section>
+
+
+        <section class="section">
+
+            <h2>What I Learned</h2>
+
+            <div class="result">
+
+                <p>
+                    • Designing an end-to-end AI automation workflow.
+                </p>
+
+                <p>
+                    • Connecting an AI application to a PostgreSQL database
+                    through Supabase.
+                </p>
+
+                <p>
+                    • Using AI for lead qualification and prioritization.
+                </p>
+
+                <p>
+                    • Working with database schemas and API integrations.
+                </p>
+
+                <p>
+                    • Building a practical CRM-oriented AI application.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        © 2026 Caroline Wanjiku Maina.
+        Built with curiosity, code & AI.
+
+    </footer>
+
+</body>
+</html>
