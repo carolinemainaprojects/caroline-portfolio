@@ -32,8 +32,6 @@
             text-decoration: none;
         }
 
-        /* NAVIGATION */
-
         nav {
             position: fixed;
             top: 0;
@@ -75,8 +73,6 @@
         .nav-links a:hover {
             color: #38bdf8;
         }
-
-        /* HERO */
 
         .hero {
             min-height: 100vh;
@@ -154,8 +150,6 @@
             opacity: 0.9;
         }
 
-        /* GENERAL SECTIONS */
-
         section {
             max-width: 1100px;
             margin: auto;
@@ -175,8 +169,6 @@
             margin: 0 auto 45px;
         }
 
-        /* ABOUT */
-
         .about {
             max-width: 800px;
             margin: auto;
@@ -188,8 +180,6 @@
             margin-bottom: 18px;
         }
 
-        /* PROJECTS */
-
         .projects {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -200,7 +190,7 @@
             background: #111827;
             border: 1px solid #1e293b;
             border-radius: 15px;
-            padding: 28px;
+            overflow: hidden;
             transition: 0.3s;
             display: flex;
             flex-direction: column;
@@ -209,6 +199,21 @@
         .project-card:hover {
             transform: translateY(-7px);
             border-color: #38bdf8;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+            display: block;
+            border-bottom: 1px solid #1e293b;
+        }
+
+        .project-content {
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
         }
 
         .project-number {
@@ -246,8 +251,8 @@
         .project-links {
             display: flex;
             gap: 15px;
-            margin-top: auto;
             flex-wrap: wrap;
+            margin-top: auto;
         }
 
         .project-links a {
@@ -259,8 +264,6 @@
         .project-links a:hover {
             text-decoration: underline;
         }
-
-        /* SKILLS */
 
         .skills {
             display: flex;
@@ -279,8 +282,6 @@
             background: #111827;
         }
 
-        /* CONTACT */
-
         .contact {
             text-align: center;
             max-width: 750px;
@@ -298,16 +299,12 @@
             flex-wrap: wrap;
         }
 
-        /* FOOTER */
-
         footer {
             text-align: center;
             padding: 30px 20px;
             border-top: 1px solid #1e293b;
             color: #64748b;
         }
-
-        /* MOBILE */
 
         @media (max-width: 800px) {
 
@@ -329,6 +326,10 @@
 
             section {
                 padding: 70px 20px;
+            }
+
+            .project-image {
+                height: 230px;
             }
         }
     </style>
@@ -464,41 +465,50 @@
 
             <div class="project-card">
 
-                <div class="project-number">
-                    01
-                </div>
+                <img
+                    src="Screenshot_2026-08-30-00-00-54-12_40deb401b9ffe8e1df2f1cc5ba480b12.jpg"
+                    alt="AI Resume Screener screenshot"
+                    class="project-image">
 
-                <h3>
-                    AI Resume Screener
-                </h3>
+                <div class="project-content">
 
-                <p>
-                    An AI-powered recruitment assistant that analyzes resumes
-                    against job descriptions, calculates a match score,
-                    identifies strengths and gaps, and generates a
-                    recruitment-oriented summary.
-                </p>
+                    <div class="project-number">
+                        01
+                    </div>
 
-                <div class="tech">
-                    <span>Python</span>
-                    <span>Gemini AI</span>
-                    <span>Streamlit</span>
-                    <span>PDF Processing</span>
-                </div>
+                    <h3>
+                        AI Resume Screener
+                    </h3>
 
-                <div class="project-links">
+                    <p>
+                        An AI-powered recruitment assistant that analyzes
+                        resumes against job descriptions, calculates a match
+                        score, identifies strengths and gaps, and generates
+                        a recruitment-oriented summary.
+                    </p>
 
-                    <a
-                        href="https://ai-resume-screener-dhhsbmjhkddjpz6tmjery3.streamlit.app/"
-                        target="_blank">
-                        Live Demo →
-                    </a>
+                    <div class="tech">
+                        <span>Python</span>
+                        <span>Gemini AI</span>
+                        <span>Streamlit</span>
+                        <span>PDF Processing</span>
+                    </div>
 
-                    <a
-                        href="https://github.com/carolinemainaprojects/AI-Resume-Screener"
-                        target="_blank">
-                        GitHub →
-                    </a>
+                    <div class="project-links">
+
+                        <a
+                            href="https://ai-resume-screener-dhhsbmjhkddjpz6tmjery3.streamlit.app/"
+                            target="_blank">
+                            Live Demo →
+                        </a>
+
+                        <a
+                            href="https://github.com/carolinemainaprojects/AI-Resume-Screener"
+                            target="_blank">
+                            GitHub →
+                        </a>
+
+                    </div>
 
                 </div>
 
@@ -509,34 +519,43 @@
 
             <div class="project-card">
 
-                <div class="project-number">
-                    02
-                </div>
+                <img
+                    src="Screenshot_2026-08-30-00-23-25-22_40deb401b9ffe8e1df2f1cc5ba480b12.jpg"
+                    alt="AI Meeting Summarizer screenshot"
+                    class="project-image">
 
-                <h3>
-                    AI Meeting Summarizer
-                </h3>
+                <div class="project-content">
 
-                <p>
-                    Converts meeting notes or transcripts into structured
-                    summaries, decisions, and action items, with support
-                    for storing tasks in Google Sheets.
-                </p>
+                    <div class="project-number">
+                        02
+                    </div>
 
-                <div class="tech">
-                    <span>Python</span>
-                    <span>Gemini AI</span>
-                    <span>Streamlit</span>
-                    <span>Google Sheets API</span>
-                </div>
+                    <h3>
+                        AI Meeting Summarizer
+                    </h3>
 
-                <div class="project-links">
+                    <p>
+                        Converts meeting notes or transcripts into structured
+                        summaries, decisions, and action items, with support
+                        for storing tasks in Google Sheets.
+                    </p>
 
-                    <a
-                        href="https://github.com/carolinemainaprojects/AI-Meeting-Summarizer"
-                        target="_blank">
-                        GitHub →
-                    </a>
+                    <div class="tech">
+                        <span>Python</span>
+                        <span>Gemini AI</span>
+                        <span>Streamlit</span>
+                        <span>Google Sheets API</span>
+                    </div>
+
+                    <div class="project-links">
+
+                        <a
+                            href="https://github.com/carolinemainaprojects/AI-Meeting-Summarizer"
+                            target="_blank">
+                            GitHub →
+                        </a>
+
+                    </div>
 
                 </div>
 
@@ -547,35 +566,44 @@
 
             <div class="project-card">
 
-                <div class="project-number">
-                    03
-                </div>
+                <img
+                    src="Screenshot_2026-08-30-00-38-18-86_40deb401b9ffe8e1df2f1cc5ba480b12.jpg"
+                    alt="AI Sales CRM Assistant screenshot"
+                    class="project-image">
 
-                <h3>
-                    AI Sales CRM Assistant
-                </h3>
+                <div class="project-content">
 
-                <p>
-                    Captures leads, stores them in a database, uses AI to
-                    qualify and score them, identifies high-priority leads,
-                    updates the CRM, and supports automated notifications.
-                </p>
+                    <div class="project-number">
+                        03
+                    </div>
 
-                <div class="tech">
-                    <span>Python</span>
-                    <span>Gemini AI</span>
-                    <span>Streamlit</span>
-                    <span>Supabase</span>
-                    <span>PostgreSQL</span>
-                </div>
+                    <h3>
+                        AI Sales CRM Assistant
+                    </h3>
 
-                <div class="project-links">
+                    <p>
+                        Captures leads, stores them in a database, uses AI to
+                        qualify and score them, identifies high-priority leads,
+                        updates the CRM, and supports automated notifications.
+                    </p>
 
-                    <a
-                        href="https://github.com/carolinemainaprojects/ai-sales-crm"
-                        target="_blank">
-                        GitHub →
-                    </a>
+                    <div class="tech">
+                        <span>Python</span>
+                        <span>Gemini AI</span>
+                        <span>Streamlit</span>
+                        <span>Supabase</span>
+                        <span>PostgreSQL</span>
+                    </div>
+
+                    <div class="project-links">
+
+                        <a
+                            href="https://github.com/carolinemainaprojects/ai-sales-crm"
+                            target="_blank">
+                            GitHub →
+                        </a>
+
+                    </div>
 
                 </div>
 
@@ -670,4 +698,4 @@
     </footer>
 
 </body>
-                        </html>
+</html>
