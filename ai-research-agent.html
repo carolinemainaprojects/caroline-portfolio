@@ -1,1 +1,489 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>AI Research & Knowledge Agent | Caroline Maina</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 60px 24px;
+        }
+
+        .back {
+            display: inline-block;
+            margin-bottom: 40px;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .number {
+            color: #2563eb;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: 48px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            color: #0f172a;
+        }
+
+        .hero p {
+            max-width: 760px;
+            margin: auto;
+            font-size: 19px;
+            color: #64748b;
+        }
+
+        .section {
+            background: white;
+            padding: 32px;
+            margin-bottom: 24px;
+            border-radius: 16px;
+            box-shadow: 0 5px 20px rgba(15, 23, 42, 0.06);
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 16px;
+            color: #0f172a;
+        }
+
+        h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+            color: #0f172a;
+        }
+
+        .tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .tech span {
+            background: #eff6ff;
+            color: #2563eb;
+            padding: 7px 13px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .feature {
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 12px;
+        }
+
+        .architecture {
+            font-family: monospace;
+            background: #0f172a;
+            color: #e2e8f0;
+            padding: 24px;
+            border-radius: 12px;
+            overflow-x: auto;
+            line-height: 1.8;
+        }
+
+        .results {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .result {
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .result strong {
+            display: block;
+            font-size: 18px;
+            color: #2563eb;
+            margin-bottom: 6px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background: #2563eb;
+            color: white;
+        }
+
+        .btn-secondary {
+            background: #e2e8f0;
+            color: #0f172a;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #64748b;
+        }
+
+        @media (max-width: 700px) {
+
+            h1 {
+                font-size: 36px;
+            }
+
+            .features,
+            .results {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <a href="index.html" class="back">
+            ← Back to Portfolio
+        </a>
+
+        <div class="hero">
+
+            <div class="number">
+                PROJECT 04
+            </div>
+
+            <h1>
+                AI Research & Knowledge Agent
+            </h1>
+
+            <p>
+                A Retrieval-Augmented Generation system that allows users
+                to ask questions about documents and receive AI-generated
+                answers grounded in retrieved evidence.
+            </p>
+
+        </div>
+
+
+        <div class="section">
+
+            <h2>Project Overview</h2>
+
+            <p>
+                This project demonstrates how Retrieval-Augmented Generation
+                can be used to build a reliable AI knowledge assistant.
+                Instead of relying entirely on an AI model's internal
+                knowledge, the system retrieves relevant information from
+                a document knowledge base before generating an answer.
+            </p>
+
+            <div class="tech">
+
+                <span>Python</span>
+                <span>RAG</span>
+                <span>FAISS</span>
+                <span>Embeddings</span>
+                <span>Gemini AI</span>
+                <span>Streamlit</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="section">
+
+            <h2>The Problem</h2>
+
+            <p>
+                Traditional AI chat systems can generate convincing answers
+                even when they do not have enough evidence to support those
+                answers. This creates a risk of hallucinations, especially
+                when working with research documents, company information,
+                policies, or technical knowledge.
+            </p>
+
+            <p style="margin-top: 15px;">
+                The goal of this project was to create a system that
+                retrieves relevant information first and then generates
+                answers based on that evidence.
+            </p>
+
+        </div>
+
+
+        <div class="section">
+
+            <h2>How It Works</h2>
+
+            <div class="features">
+
+                <div class="feature">
+
+                    <h3>📄 1. Document Processing</h3>
+
+                    <p>
+                        Documents are loaded and their text is extracted
+                        and prepared for processing.
+                    </p>
+
+                </div>
+
+                <div class="feature">
+
+                    <h3>✂️ 2. Text Chunking</h3>
+
+                    <p>
+                        Large documents are divided into smaller chunks
+                        so relevant sections can be retrieved efficiently.
+                    </p>
+
+                </div>
+
+                <div class="feature">
+
+                    <h3>🧠 3. Embeddings</h3>
+
+                    <p>
+                        Text chunks are converted into numerical vector
+                        representations that capture their semantic meaning.
+                    </p>
+
+                </div>
+
+                <div class="feature">
+
+                    <h3>🔎 4. FAISS Retrieval</h3>
+
+                    <p>
+                        FAISS performs vector similarity search to retrieve
+                        the document chunks most relevant to a user's question.
+                    </p>
+
+                </div>
+
+                <div class="feature">
+
+                    <h3>🤖 5. Grounded Generation</h3>
+
+                    <p>
+                        The retrieved evidence is provided to the AI model
+                        so the generated response is grounded in the source
+                        material.
+                    </p>
+
+                </div>
+
+                <div class="feature">
+
+                    <h3>🛡️ 6. Evaluation</h3>
+
+                    <p>
+                        Retrieval quality and answer quality are tested to
+                        identify weaknesses and reduce unsupported responses.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="section">
+
+            <h2>System Architecture</h2>
+
+            <div class="architecture">
+
+                User Question
+                       ↓
+                Query Processing
+                       ↓
+                Embedding Generation
+                       ↓
+                FAISS Vector Search
+                       ↓
+                Relevant Document Chunks
+                       ↓
+                Context Assembly
+                       ↓
+                Gemini AI
+                       ↓
+                Grounded Answer
+                       ↓
+                Evaluation
+
+            </div>
+
+        </div>
+
+
+        <div class="section">
+
+            <h2>AI Reliability & Testing</h2>
+
+            <p>
+                A major focus of this project was not simply generating
+                answers, but evaluating whether the system could retrieve
+                the right information and produce answers supported by
+                that information.
+            </p>
+
+            <div class="results">
+
+                <div class="result">
+
+                    <strong>Retrieval Quality</strong>
+
+                    Measures whether the correct document chunks are
+                    retrieved for a question.
+
+                </div>
+
+                <div class="result">
+
+                    <strong>Answer Quality</strong>
+
+                    Measures whether generated answers are correct,
+                    relevant, and supported by evidence.
+
+                </div>
+
+                <div class="result">
+
+                    <strong>Hallucination Testing</strong>
+
+                    Tests whether the system produces unsupported
+                    information when evidence is insufficient.
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="section">
+
+            <h2>Why This Project Matters</h2>
+
+            <p>
+                This project demonstrates practical knowledge of modern
+                AI application development beyond basic prompting.
+            </p>
+
+            <p style="margin-top: 15px;">
+                It combines document processing, vector databases,
+                semantic search, embeddings, LLM generation, evaluation,
+                and user-facing deployment into one end-to-end AI system.
+            </p>
+
+        </div>
+
+
+        <div class="section">
+
+            <h2>Technologies Used</h2>
+
+            <div class="tech">
+
+                <span>Python</span>
+                <span>FAISS</span>
+                <span>RAG</span>
+                <span>Embeddings</span>
+                <span>Gemini AI</span>
+                <span>Streamlit</span>
+                <span>Document Processing</span>
+                <span>Vector Search</span>
+
+            </div>
+
+            <div class="buttons">
+
+                <a
+                    href="https://github.com/carolinemainaprojects/caroline-portfolio"
+                    target="_blank"
+                    class="btn btn-primary">
+                    GitHub Repository →
+                </a>
+
+                <a
+                    href="index.html"
+                    class="btn btn-secondary">
+                    Back to Portfolio
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+
+        © 2026 Caroline Maina · AI Automation & AI Solutions Developer
+
+    </footer>
+
+</body>
+</html>
+```
+  
