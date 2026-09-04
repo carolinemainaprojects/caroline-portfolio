@@ -1,306 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Caroline Wanjiku Maina — AI Automation & Generative AI Developer portfolio. Practical AI applications, RAG systems, intelligent workflows and API integrations.">
-  <title>Caroline Wanjiku Maina | AI Automation & Generative AI Developer</title>
-  <style>
-    :root{
-      --bg:#080b12;
-      --panel:#101521;
-      --panel2:#141b29;
-      --text:#f4f7fb;
-      --muted:#aab4c5;
-      --accent:#7dd3fc;
-      --accent2:#a78bfa;
-      --border:rgba(255,255,255,.09);
-      --shadow:0 18px 55px rgba(0,0,0,.28);
-      --max:1120px;
-    }
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{
-      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-      background:linear-gradient(180deg,#080b12 0%,#0b1019 45%,#080b12 100%);
-      color:var(--text);line-height:1.65;
-    }
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
-    .container{width:min(92%,var(--max));margin:auto}
-    nav{
-      position:sticky;top:0;z-index:50;
-      background:rgba(8,11,18,.86);backdrop-filter:blur(14px);
-      border-bottom:1px solid var(--border);
-    }
-    .nav-inner{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .brand{font-size:1.25rem;font-weight:800;letter-spacing:-.02em}
-    .brand span{color:var(--accent)}
-    .nav-links{display:flex;gap:22px;flex-wrap:wrap;color:var(--muted);font-size:.92rem}
-    .nav-links a:hover{color:var(--text)}
-    .hero{padding:105px 0 80px;min-height:78vh;display:grid;align-items:center}
-    .eyebrow{color:var(--accent);font-size:.8rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;margin-bottom:16px}
-    h1{font-size:clamp(2.7rem,7vw,5.6rem);line-height:1.02;letter-spacing:-.055em;max-width:850px}
-    .hero h1 span{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
-    .hero p{max-width:760px;color:var(--muted);font-size:1.16rem;margin:25px 0 30px}
-    .buttons{display:flex;gap:12px;flex-wrap:wrap}
-    .btn{padding:12px 18px;border-radius:10px;border:1px solid var(--border);font-weight:750;transition:.2s}
-    .btn.primary{background:var(--text);color:#080b12}
-    .btn.secondary{background:var(--panel)}
-    .btn:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.2)}
-    section{padding:82px 0}
-    .section-head{margin-bottom:34px}
-    .section-head h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.04em}
-    .section-head p{color:var(--muted);max-width:720px;margin-top:8px}
-    .about-grid,.service-grid,.skills-grid{display:grid;gap:18px}
-    .about-grid{grid-template-columns:1.3fr .7fr}
-    .service-grid{grid-template-columns:repeat(3,1fr)}
-    .skills-grid{grid-template-columns:repeat(2,1fr)}
-    .card{
-      background:linear-gradient(145deg,rgba(20,27,41,.96),rgba(13,18,28,.96));
-      border:1px solid var(--border);border-radius:18px;padding:25px;box-shadow:var(--shadow)
-    }
-    .card h3{font-size:1.2rem;margin-bottom:10px}
-    .card p,.card li{color:var(--muted)}
-    .card ul{padding-left:19px}
-    .project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
-    .project-card{overflow:hidden;padding:0}
-    .project-image{aspect-ratio:16/9;object-fit:cover;width:100%;background:#0a0e16;border-bottom:1px solid var(--border)}
-    .project-content{padding:25px}
-    .project-number{font-size:.76rem;color:var(--accent);font-weight:800;letter-spacing:.12em;text-transform:uppercase}
-    .project-content h3{font-size:1.65rem;margin:5px 0 10px}
-    .project-content p{color:var(--muted)}
-    .tags{display:flex;flex-wrap:wrap;gap:7px;margin:17px 0}
-    .tag{font-size:.78rem;padding:5px 9px;border-radius:999px;background:#0a0f18;border:1px solid var(--border);color:#c9d3e2}
-    .project-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
-    .small-btn{padding:9px 12px;border:1px solid var(--border);border-radius:9px;font-size:.85rem;font-weight:700}
-    .small-btn:hover{border-color:var(--accent);color:var(--accent)}
-    .case-studies{display:grid;gap:22px}
-    .case{
-      border:1px solid var(--border);border-radius:18px;background:rgba(16,21,33,.8);overflow:hidden
-    }
-    .case summary{
-      cursor:pointer;list-style:none;padding:24px 26px;display:flex;align-items:center;justify-content:space-between;gap:20px
-    }
-    .case summary::-webkit-details-marker{display:none}
-    .case summary:after{content:"+";font-size:1.5rem;color:var(--accent)}
-    .case[open] summary:after{content:"−"}
-    .case-title{display:flex;gap:14px;align-items:center}
-    .case-num{color:var(--accent);font-weight:800;font-size:.8rem}
-    .case summary h3{font-size:1.3rem}
-    .case-body{padding:0 26px 28px;border-top:1px solid var(--border)}
-    .case-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:24px}
-    .case-block{background:rgba(8,11,18,.45);border:1px solid var(--border);border-radius:13px;padding:18px}
-    .case-block h4{font-size:.82rem;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:7px}
-    .workflow{
-      margin-top:20px;padding:16px;border-radius:12px;background:#080c14;border:1px dashed rgba(125,211,252,.25);
-      color:#dce7f5;font-weight:700;overflow:auto;white-space:nowrap
-    }
-    .tech-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:9px}
-    .tech{background:#0a1019;border:1px solid var(--border);padding:6px 9px;border-radius:8px;color:#d8e0eb;font-size:.8rem}
-    .case-image{margin-top:22px;border-radius:13px;border:1px solid var(--border);max-height:520px;object-fit:contain;background:#080b12}
-    .case-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
-    .contact{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-    .contact-card a{color:var(--accent)}
-    footer{border-top:1px solid var(--border);padding:30px 0;color:var(--muted);font-size:.9rem}
-    .muted{color:var(--muted)}
-    @media(max-width:850px){
-      .about-grid,.contact,.case-grid{grid-template-columns:1fr}
-      .service-grid{grid-template-columns:1fr 1fr}
-      .project-grid,.skills-grid{grid-template-columns:1fr}
-      .nav-links{display:none}
-    }
-    @media(max-width:560px){
-      .service-grid{grid-template-columns:1fr}
-      .hero{padding-top:75px}
-      section{padding:65px 0}
-      .project-content,.case-body,.case summary{padding-left:18px;padding-right:18px}
-    }
-  </style>
-</head>
-<body>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Caroline Wanjiku Maina — AI Automation & Generative AI Developer building intelligent applications, RAG systems and workflow automations.">
+<title>Caroline Wanjiku Maina | AI Automation & Generative AI Developer</title>
 
+<style>
+:root{
+  --bg:#070b14; --surface:#0d1422; --surface2:#111b2d; --text:#f8fafc;
+  --muted:#a8b3c7; --line:rgba(148,163,184,.18); --accent:#6ee7f9;
+  --accent2:#8b5cf6; --glow:rgba(110,231,249,.20);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:
+radial-gradient(circle at 15% 10%,rgba(139,92,246,.12),transparent 28%),
+radial-gradient(circle at 85% 25%,rgba(34,211,238,.10),transparent 25%);z-index:-1}
+a{color:inherit;text-decoration:none}
+nav{position:fixed;top:0;left:0;width:100%;z-index:1000;background:rgba(7,11,20,.78);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav-container{max-width:1180px;margin:auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:1.15rem;font-weight:800;letter-spacing:.3px}.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:26px;list-style:none}.nav-links a{color:#cbd5e1;font-size:.92rem;transition:.25s}.nav-links a:hover{color:var(--accent)}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:130px 24px 80px;position:relative}
+.hero-content{max-width:930px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;padding:8px 15px;border:1px solid rgba(110,231,249,.3);background:rgba(110,231,249,.06);border-radius:999px;color:var(--accent);font-size:.82rem;font-weight:700;letter-spacing:.4px;margin-bottom:24px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 14px var(--accent)}
+.hero h1{font-size:clamp(3rem,8vw,6.2rem);line-height:.98;letter-spacing:-3px;margin-bottom:25px}
+.gradient{background:linear-gradient(90deg,var(--accent),#c4b5fd,var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .lead{max-width:760px;margin:auto;color:var(--muted);font-size:1.15rem}
+.profile-photo{margin:34px auto 25px}.profile-photo img{width:145px;height:145px;object-fit:cover;border-radius:50%;border:3px solid rgba(110,231,249,.5);box-shadow:0 0 45px var(--glow)}
+.buttons{margin-top:30px;display:flex;justify-content:center;gap:13px;flex-wrap:wrap}
+.btn{padding:12px 20px;border-radius:10px;border:1px solid rgba(110,231,249,.45);font-weight:750;font-size:.9rem;transition:.25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(0,0,0,.25)}
+.btn-primary{background:linear-gradient(135deg,var(--accent),#67e8f9);color:#061019;border-color:transparent}.btn-secondary{color:var(--accent);background:rgba(255,255,255,.02)}
+section{max-width:1180px;margin:auto;padding:95px 24px}
+.section-kicker{text-align:center;color:var(--accent);text-transform:uppercase;letter-spacing:2px;font-size:.75rem;font-weight:800;margin-bottom:10px}
+.section-title{text-align:center;font-size:clamp(2rem,4vw,3rem);letter-spacing:-1px;margin-bottom:12px}
+.section-subtitle{text-align:center;color:var(--muted);max-width:720px;margin:0 auto 48px}
+.about-grid{display:grid;grid-template-columns:1fr 1.25fr;gap:50px;align-items:center}
+.about-card{background:linear-gradient(145deg,rgba(17,27,45,.92),rgba(10,15,27,.92));border:1px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 20px 60px rgba(0,0,0,.18)}
+.about-card h3{font-size:1.35rem;margin-bottom:12px}.about-card p{color:var(--muted);margin-bottom:15px}.about-card p:last-child{margin-bottom:0}
+.highlight-list{display:grid;gap:14px}.highlight{padding:19px;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.025)}.highlight strong{display:block;margin-bottom:4px}.highlight span{color:var(--muted);font-size:.9rem}
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:25px}
+.project-card{background:linear-gradient(160deg,#101a2b,#0b1220);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:.3s}
+.project-card:hover{transform:translateY(-7px);border-color:rgba(110,231,249,.5);box-shadow:0 20px 50px rgba(0,0,0,.3)}
+.project-image{width:100%;height:235px;object-fit:cover;display:block;border-bottom:1px solid var(--line)}
+.project-content{padding:27px;display:flex;flex-direction:column;flex:1}.project-number{color:var(--accent);font-size:.76rem;font-weight:800;letter-spacing:2px;margin-bottom:12px}.project-card h3{font-size:1.4rem;margin-bottom:10px}.project-card p{color:var(--muted);font-size:.93rem;margin-bottom:18px}
+.tech{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:22px}.tech span,.skill{padding:6px 10px;border-radius:7px;background:rgba(148,163,184,.09);border:1px solid var(--line);color:#d8e0ed;font-size:.76rem}
+.project-links{display:flex;gap:16px;flex-wrap:wrap;margin-top:auto}.project-links a{color:var(--accent);font-size:.86rem;font-weight:750}.project-links a:hover{text-decoration:underline}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.service{padding:28px;border-radius:18px;background:var(--surface);border:1px solid var(--line);transition:.3s}.service:hover{transform:translateY(-5px);border-color:rgba(139,92,246,.55)}.icon{font-size:1.8rem;margin-bottom:14px}.service h3{font-size:1.1rem;margin-bottom:8px}.service p{color:var(--muted);font-size:.9rem}
+.skill-groups{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}.skill-group{padding:25px;border:1px solid var(--line);background:var(--surface);border-radius:18px}.skill-group h3{margin-bottom:15px;font-size:1rem}.skills{display:flex;flex-wrap:wrap;gap:8px}.skill{background:rgba(110,231,249,.045)}
+.contact-box{text-align:center;padding:55px 25px;border-radius:25px;border:1px solid rgba(110,231,249,.2);background:radial-gradient(circle at top,rgba(110,231,249,.09),transparent 60%),var(--surface)}
+.contact-box p{color:var(--muted);max-width:650px;margin:0 auto 27px}
+footer{text-align:center;padding:28px 20px;border-top:1px solid var(--line);color:#738097;font-size:.85rem}
+@media(max-width:850px){.nav-links{display:none}.about-grid,.projects,.skill-groups{grid-template-columns:1fr}.services{grid-template-columns:1fr}.hero h1{letter-spacing:-2px}.project-image{height:225px}section{padding:75px 20px}}
+</style>
+</head>
+
+<body>
 <nav>
-  <div class="container nav-inner">
-    <a class="brand" href="#top">Caroline<span>.</span></a>
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-    </div>
+  <div class="nav-container">
+    <div class="logo">Caroline<span>.</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li><li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li><li><a href="#skills">Skills</a></li><li><a href="#contact">Contact</a></li>
+    </ul>
   </div>
 </nav>
 
-<main id="top">
-  <section class="hero">
-    <div class="container">
-      <div class="eyebrow">AI AUTOMATION • GENERATIVE AI • RAG</div>
-      <h1>Caroline Wanjiku Maina<br><span>AI Automation &amp; Generative AI Developer</span></h1>
-      <p>
-        I design and build practical AI applications, intelligent workflows, and RAG-powered
-        solutions that turn repetitive processes and complex information into smarter,
-        more efficient experiences.
-      </p>
-      <div class="buttons">
-        <a class="btn primary" href="#projects">Explore My Work</a>
-        <a class="btn secondary" href="#contact">Let's Connect</a>
-        <a class="btn secondary" href="https://github.com/carolinemainaprojects" target="_blank" rel="noopener">GitHub ↗</a>
-        <a class="btn secondary" href="https://www.linkedin.com/in/caroline-maina-480b74430" target="_blank" rel="noopener">LinkedIn ↗</a>
-      </div>
+<header class="hero">
+  <div class="hero-content">
+    <div class="eyebrow"><span class="dot"></span> AI AUTOMATION • GENERATIVE AI • RAG</div>
+    <h1>Caroline Wanjiku Maina</h1>
+    <h2 class="gradient" style="font-size:clamp(1.45rem,3vw,2.35rem);margin-bottom:20px">AI Automation & Generative AI Developer</h2>
+    <p class="lead">I design and build practical AI applications, intelligent workflows, and RAG-powered solutions that turn repetitive processes and complex information into smarter, more efficient experiences.</p>
+    <div class="profile-photo"><img src="MOK_6721.jpg" alt="Caroline Wanjiku Maina"></div>
+    <div class="buttons">
+      <a href="#projects" class="btn btn-primary">Explore My Work</a>
+      <a href="#services" class="btn btn-secondary">View Services</a>
+      <a href="https://github.com/carolinemainaprojects" target="_blank" class="btn btn-secondary">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/caroline-maina-480b74430" target="_blank" class="btn btn-secondary">LinkedIn ↗</a>
     </div>
-  </section>
+  </div>
+</header>
 
-  <section id="about">
-    <div class="container">
-      <div class="section-head">
-        <div class="eyebrow">WHO I AM</div>
-        <h2>Building AI that works in the real world.</h2>
-        <p>From an idea and a business problem to a working, user-focused AI solution.</p>
-      </div>
-      <div class="about-grid">
-        <div class="card">
-          <h3>About Me</h3>
-          <p>
-            I’m an emerging AI Automation and Generative AI Developer focused on creating
-            practical solutions that improve how people and organizations work.
-          </p><br>
-          <p>
-            My hands-on work spans Python, LLM integration, prompt engineering, APIs,
-            databases, workflow automation, document processing, and Retrieval-Augmented
-            Generation (RAG).
-          </p><br>
-          <p>
-            I enjoy turning real-world problems into structured AI workflows;connecting
-            data, models, applications, and automation into solutions that are useful,
-            testable, and deployable.
-          </p>
-        </div>
-        <div class="card">
-          <h3>What I Bring</h3>
-          <ul>
-            <li>Practical AI application development</li>
-            <li>Intelligent workflow design</li>
-            <li>Generative AI &amp; LLM integration</li>
-            <li>RAG and document-grounded AI</li>
-            <li>API and database integration</li>
-            <li>Testing, troubleshooting and deployment</li>
-          </ul>
-        </div>
-      </div>
+<section id="about">
+  <div class="section-kicker">Who I Am</div><h2 class="section-title">Building AI that works in the real world.</h2>
+  <p class="section-subtitle">From an idea and a business problem to a working, user-focused AI solution.</p>
+  <div class="about-grid">
+    <div class="about-card">
+      <h3>About Me</h3>
+      <p>I’m an emerging AI Automation and Generative AI Developer focused on creating practical solutions that improve how people and organizations work.</p>
+      <p>My hands-on work spans Python, LLM integration, prompt engineering, APIs, databases, workflow automation, document processing, and Retrieval-Augmented Generation (RAG).</p>
+      <p>I enjoy turning real-world problems into structured AI workflows — connecting data, models, applications, and automation into solutions that are useful, testable, and deployable.</p>
+      <p>My portfolio demonstrates this approach through AI applications for recruitment, meetings, sales operations, and research & knowledge retrieval.</p>
     </div>
-  </section>
-
-  <section id="services">
-    <div class="container">
-      <div class="section-head">
-        <div class="eyebrow">WHAT I OFFER</div>
-        <h2>Practical AI &amp; automation services.</h2>
-      </div>
-      <div class="service-grid">
-        <div class="card"><h3>⚙️ AI Workflow Automation</h3><p>Design intelligent workflows that reduce repetitive manual work and connect business tools into efficient processes.</p></div>
-        <div class="card"><h3>🤖 Generative AI Integration</h3><p>Integrate LLMs into applications and workflows for summarization, classification, extraction, qualification and content generation.</p></div>
-        <div class="card"><h3>🔎 RAG &amp; Knowledge Solutions</h3><p>Build document-based AI assistants that retrieve relevant information and generate grounded answers from a knowledge base.</p></div>
-        <div class="card"><h3>💻 AI Application Development</h3><p>Develop practical AI applications with Python and Streamlit, from concept through deployment.</p></div>
-        <div class="card"><h3>🔗 API &amp; System Integration</h3><p>Connect AI applications with APIs, databases, spreadsheets and other systems to create connected workflows.</p></div>
-        <div class="card"><h3>📄 Document Intelligence</h3><p>Process documents, extract useful information, summarize content and turn unstructured data into actionable outputs.</p></div>
-      </div>
+    <div class="highlight-list">
+      <div class="highlight"><strong>AI-Powered Applications</strong><span>Designing practical applications that combine user needs, AI models, data, and intuitive interfaces.</span></div>
+      <div class="highlight"><strong>Intelligent Automation</strong><span>Designing workflows that connect tools and automate repetitive business processes.</span></div>
+      <div class="highlight"><strong>Grounded AI & RAG</strong><span>Building document-based retrieval systems that use relevant evidence to support AI-generated answers.</span></div>
+      <div class="highlight"><strong>End-to-End Mindset</strong><span>From workflow design and API integration to application development, testing, and deployment.</span></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="projects">
-    <div class="container">
-      <div class="section-head">
-        <div class="eyebrow">SELECTED WORK</div>
-        <h2>Four practical AI projects.</h2>
-        <p>Hands-on AI solutions designed, built, tested and deployed across recruitment, productivity, sales and knowledge retrieval.</p>
-      </div>
+<section id="services">
+  <div class="section-kicker">What I Offer</div><h2 class="section-title">Services</h2>
+  <p class="section-subtitle">Practical AI and automation services designed around real business workflows.</p>
+  <div class="services">
+    <div class="service"><div class="icon">⚙️</div><h3>AI Workflow Automation</h3><p>Design intelligent workflows that reduce repetitive manual work and connect business tools into efficient processes.</p></div>
+    <div class="service"><div class="icon">🤖</div><h3>Generative AI Integration</h3><p>Integrate LLMs into applications and workflows for summarization, classification, extraction, qualification, and content generation.</p></div>
+    <div class="service"><div class="icon">🔎</div><h3>RAG & Knowledge Solutions</h3><p>Build document-based AI assistants that retrieve relevant information and generate grounded answers from a knowledge base.</p></div>
+    <div class="service"><div class="icon">💻</div><h3>AI Application Development</h3><p>Develop practical AI applications with Python and Streamlit, from concept through deployment.</p></div>
+    <div class="service"><div class="icon">🔗</div><h3>API & System Integration</h3><p>Connect AI applications with APIs, databases, spreadsheets, and other systems to create connected workflows.</p></div>
+    <div class="service"><div class="icon">📄</div><h3>Document Intelligence</h3><p>Process documents, extract useful information, summarize content, and turn unstructured data into actionable outputs.</p></div>
+  </div>
+</section>
 
-      <div class="project-grid">
-        <article class="card project-card">
-          <img class="project-image" src="Screenshot_2026-08-30-00-00-54-12_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="AI Resume Screener application screenshot">
-          <div class="project-content">
-            <div class="project-number">01 / AI APPLICATION</div>
-            <h3>AI Resume Screener</h3>
-            <p>Analyzes resumes against job descriptions, calculates resume and job-match scores, identifies strengths and gaps, and generates recruitment-oriented insights.</p>
-            <div class="tags"><span class="tag">Python</span><span class="tag">Gemini AI</span><span class="tag">Streamlit</span><span class="tag">PyPDF</span></div>
-            <div class="project-links"><a class="small-btn" href="#case-1">Case Study ↓</a><a class="small-btn" href="https://ai-resume-screener-dhhsbmjhkddjpz6tmjery3.streamlit.app/" target="_blank" rel="noopener">Live Demo ↗</a><a class="small-btn" href="https://github.com/carolinemainaprojects/AI-Resume-Screener" target="_blank" rel="noopener">GitHub ↗</a></div>
-          </div>
-        </article>
+<section id="projects">
+  <div class="section-kicker">Selected Work</div><h2 class="section-title">Featured Projects</h2>
+  <p class="section-subtitle">Hands-on AI solutions designed, built, tested, and deployed.</p>
+  <div class="projects">
 
-        <article class="card project-card">
-          <img class="project-image" src="Screenshot_2026-08-30-00-23-25-22_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="AI Meeting Summarizer application screenshot">
-          <div class="project-content">
-            <div class="project-number">02 / PRODUCTIVITY AI</div>
-            <h3>AI Meeting Summarizer</h3>
-            <p>Converts meeting notes or transcripts into structured summaries, decisions and action items, with downloadable results and external data integration.</p>
-            <div class="tags"><span class="tag">Python</span><span class="tag">Gemini AI</span><span class="tag">Streamlit</span><span class="tag">Google Sheets</span></div>
-            <div class="project-links"><a class="small-btn" href="#case-2">Case Study ↓</a><a class="small-btn" href="https://ai-meeting-summarizer-nfqkeqvc8rbgjvyjqxxfyz.streamlit.app/" target="_blank" rel="noopener">Live Demo ↗</a><a class="small-btn" href="https://github.com/carolinemainaprojects/AI-Meeting-Summarizer" target="_blank" rel="noopener">GitHub ↗</a></div>
-          </div>
-        </article>
-
-        <article class="card project-card">
-          <img class="project-image" src="Screenshot_2026-08-30-00-38-18-86_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="AI Sales CRM Assistant application screenshot">
-          <div class="project-content">
-            <div class="project-number">03 / AI AUTOMATION</div>
-            <h3>AI Sales CRM Assistant</h3>
-            <p>Captures leads, stores them in a database, uses AI to qualify and prioritize opportunities, and supports an AI-assisted CRM workflow.</p>
-            <div class="tags"><span class="tag">Python</span><span class="tag">Gemini AI</span><span class="tag">Supabase</span><span class="tag">PostgreSQL</span></div>
-            <div class="project-links"><a class="small-btn" href="#case-3">Case Study ↓</a><a class="small-btn" href="https://ai-sales-crm-wz7cmfdceq8vwzovdsw493.streamlit.app/" target="_blank" rel="noopener">Live Demo ↗</a><a class="small-btn" href="https://github.com/carolinemainaprojects/ai-sales-crm" target="_blank" rel="noopener">GitHub ↗</a></div>
-          </div>
-        </article>
-
-        <article class="card project-card">
-          <img class="project-image" src="Screenshot_2026-08-31-16-10-39-83_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="AI Research and Knowledge Agent application screenshot">
-          <div class="project-content">
-            <div class="project-number">04 / RAG SYSTEM</div>
-            <h3>AI Research &amp; Knowledge Agent</h3>
-            <p>A Retrieval-Augmented Generation application that processes documents, performs semantic search with FAISS and generates grounded answers based on retrieved evidence.</p>
-            <div class="tags"><span class="tag">RAG</span><span class="tag">FAISS</span><span class="tag">Embeddings</span><span class="tag">Gemini AI</span></div>
-            <div class="project-links"><a class="small-btn" href="#case-4">Case Study ↓</a><a class="small-btn" href="https://ai-research-knowledge-agent-jvmefkcrldnsvuahdwzwxa.streamlit.app/" target="_blank" rel="noopener">Live Demo ↗</a><a class="small-btn" href="https://github.com/carolinemainaprojects/AI-Research-Knowledge-Agent" target="_blank" rel="noopener">GitHub ↗</a></div>
-          </div>
-        </article>
-      </div>
+    <div class="project-card">
+      <img src="Screenshot_2026-08-30-00-00-54-12_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="AI Resume Screener screenshot" class="project-image">
+      <div class="project-content"><div class="project-number">01 / AI APPLICATION</div><h3>AI Resume Screener</h3>
+      <p>An AI-powered recruitment assistant that analyzes resumes against job descriptions, calculates a match score, identifies strengths and gaps, and generates recruitment-oriented insights.</p>
+      <div class="tech"><span>Python</span><span>Gemini AI</span><span>Streamlit</span><span>PyPDF</span></div>
+      <div class="project-links"><a href="resume-screener.html">Case Study →</a><a href="https://ai-resume-screener-dhhsbmjhkddjpz6tmjery3.streamlit.app/" target="_blank">Live Demo →</a><a href="https://github.com/carolinemainaprojects/AI-Resume-Screener" target="_blank">GitHub →</a></div></div>
     </div>
-  </section>
 
-  <section id="case-studies">
-    <div class="container">
-      <div class="section-head">
-        <div class="eyebrow">PROJECT CASE STUDIES</div>
-        <h2>How I approached each solution.</h2>
-        <p>Open a project to see the problem, solution, workflow, technologies, capabilities and outcome.</p>
-      </div>
+    <div class="project-card">
+      <img src="Screenshot_2026-08-30-00-23-25-22_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="AI Meeting Summarizer screenshot" class="project-image">
+      <div class="project-content"><div class="project-number">02 / PRODUCTIVITY AI</div><h3>AI Meeting Summarizer</h3>
+      <p>Converts meeting notes or transcripts into structured summaries, decisions, and action items, with support for external data storage.</p>
+      <div class="tech"><span>Python</span><span>Gemini AI</span><span>Streamlit</span><span>Google Sheets API</span></div>
+      <div class="project-links"><a href="meeting-summarizer.html">Case Study →</a><a href="https://github.com/carolinemainaprojects/AI-Meeting-Summarizer" target="_blank">GitHub →</a></div></div>
+    </div>
 
-      <div class="case-studies">
+    <div class="project-card">
+      <img src="Screenshot_2026-08-30-00-38-18-86_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="AI Sales CRM Assistant screenshot" class="project-image">
+      <div class="project-content"><div class="project-number">03 / AI AUTOMATION</div><h3>AI Sales CRM Assistant</h3>
+      <p>Captures leads, stores them in a database, uses AI to qualify and prioritize opportunities, and manages lead information through a CRM workflow.</p>
+      <div class="tech"><span>Python</span><span>Gemini AI</span><span>Streamlit</span><span>Supabase</span><span>PostgreSQL</span></div>
+      <div class="project-links"><a href="sales-crm.html">Case Study →</a><a href="https://github.com/carolinemainaprojects/ai-sales-crm" target="_blank">GitHub →</a></div></div>
+    </div>
 
-        <details class="case" id="case-1">
-          <summary><div class="case-title"><span class="case-num">01</span><h3>AI Resume Screener</h3></div></summary>
-          <div class="case-body">
-            <div class="case-grid">
-              <div class="case-block"><h4>Problem</h4><p>Initial resume screening can require recruiters to manually compare candidate information with job requirements.</p></div>
-              <div class="case-block"><h4>Solution</h4><p>Built an AI-powered recruitment application that accepts a PDF resume and job description, extracts the resume text and uses Gemini to evaluate candidate suitability.</p></div>
-              <div class="case-block"><h4>Key Features</h4><ul><li>PDF resume upload and text extraction</li><li>Resume and job-match scoring</li><li>Skills, strengths and weaknesses</li><li>AI-generated recommendations</li><li>Streamlit web interface</li></ul></div>
-              <div class="case-block"><h4>Outcome</h4><p>Created a working recruitment assistant that demonstrates document processing, LLM integration, structured AI analysis and deployment.</p></div>
-            </div>
-            <div class="workflow">PDF Resume → Text Extraction → Google Gemini → AI Evaluation → Scores + Candidate Insights</div>
-            <div class="case-block" style="margin-top:20px"><h4>Technology Stack</h4><div class="tech-list"><span class="tech">Python</span><span class="tech">Google Gemini</span><span class="tech">Streamlit</span><span class="tech">PyPDF</span><span class="tech">python-dotenv</span><span class="tech">GitHub</span></div></div>
-            <img class="case-image" src="Screenshot_2026-08-30-00-00-54-12_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="AI Resume Screener detailed screenshot">
-            <div class="case-links"><a class="small-btn" href="https://ai-resume-screener-dhhsbmjhkddjpz6tmjery3.streamlit.app/" target="_blank" rel="noopener">Try Live Demo ↗</a><a class="small-btn" href="https://github.com/carolinemainaprojects/AI-Resume-Screener" target="_blank" rel="noopener">View GitHub ↗</a></div>
-          </div>
-        </details>
+    <div class="project-card">
+      <img src="Screenshot_2026-08-31-16-10-39-83_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="AI Research and Knowledge Agent screenshot" class="project-image">
+      <div class="project-content"><div class="project-number">04 / RAG SYSTEM</div><h3>AI Research & Knowledge Agent</h3>
+      <p>A Retrieval-Augmented Generation application that processes documents, performs semantic search with FAISS, and generates grounded AI answers based on retrieved evidence.</p>
+      <div class="tech"><span>Python</span><span>RAG</span><span>FAISS</span><span>Embeddings</span><span>Gemini AI</span><span>Streamlit</span></div>
+      <div class="project-links"><a href="ai-research-agent.html">Case Study →</a><a href="https://ai-research-knowledge-agent-jvmefkcrldnsvuahdwzwxa.streamlit.app/" target="_blank">Live Demo →</a><a href="https://github.com/carolinemainaprojects/AI-Research-Knowledge-Agent" target="_blank">GitHub →</a></div></div>
+    </div>
 
-        <details class="case" id="case-2">
-          <summary><div class="case-title"><span class="case-num">02</span><h3>AI Meeting Summarizer &amp; Action Tracker</h3></div></summary>
-          <div class="case-body">
-            <div class="case-grid">
-              <div class="case-block"><h4>Problem</h4><p>Meeting notes and transcripts can contain important information that is difficult to organize and revisit manually.</p></div>
-              <div class="case-block"><h4>Solution</h4><p>Built an AI meeting assistant that transforms meeting notes or transcripts into concise summaries, decisions, discussion points and actionable tasks.</p></div>
-              <div class="case-block"><h4>Key Features</h4><ul><li>Meeting notes/transcript input</li><li>AI summarization</li><li>Decision extraction</li><li>Action-item extraction</li><li>Structured and downloadable results</li></ul></div>
-              <div class="case-block"><h4>Outcome</h4><p>Demonstrated how generative AI can automate post-meeting documentation and turn unstructured meeting content into actionable information.</p></div>
-            </div>
-            <div class="workflow">Meeting Notes / Transcript → Streamlit → Google Gemini → Summary + Decisions + Action Items → Download</div>
-            <div class="case-block" style="margin-top:20px"><h4>Technology Stack</h4><div class="tech-list"><span class="tech">Python</span><span class="tech">Google Gemini API</span><span class="tech">Streamlit</span><span class="tech">Pandas</span><span class="tech">Google Sheets / Google Cloud</span><span class="tech">GitHub</span></div></div>
-            <img class="case-image" src="Screenshot_2026-08-30-00-23-25-22_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="AI Meeting Summarizer detailed screenshot">
-            <div class="case-links"><a class="small-btn" href="h
+  </div>
+</section>
+
+<section id="skills">
+  <div class="section-kicker">My Toolkit</div><h2 class="section-title">Skills & Technologies</h2>
+  <p class="section-subtitle">Organized by the areas I use to design, build, integrate, and deploy AI solutions.</p>
+  <div class="skill-groups">
+    <div class="skill-group"><h3>🤖 AI Automation & Generative AI</h3><div class="skills"><span class="skill">AI Automation</span><span class="skill">Generative AI</span><span class="skill">LLM Integration</span><span class="skill">Prompt Engineering</span><span class="skill">Workflow Design</span><span class="skill">Structured AI Outputs</span></div></div>
+    <div class="skill-group"><h3>🧠 RAG & AI Systems</h3><div class="skills"><span class="skill">RAG</span><span class="skill">Semantic Search</span><span class="skill">FAISS</span><span class="skill">Embeddings</span><span class="skill">Document Processing</span><span class="skill">AI Evaluation</span><span class="skill">Hallucination Testing</span></div></div>
+    <div class="skill-group"><h3>💻 Development</h3><div class="skills"><span class="skill">Python</span><span class="skill">Streamlit</span><span class="skill">Application Development</span><span class="skill">JSON</span><span class="skill">Git & GitHub</span></div></div>
+    <div class="skill-group"><h3>🔗 APIs, Data & Integration</h3><div class="skills"><span class="skill">REST APIs</span><span class="skill">API Integration</span><span class="skill">Google Sheets API</span><span class="skill">Supabase</span><span class="skill">PostgreSQL</span><span class="skill">Google Cloud</span></div></div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact-box">
+    <div class="section-kicker">Let's Connect</div><h2 class="section-title">Have an AI idea or workflow to improve?</h2>
+    <p>I'm open to opportunities, freelance projects, and collaborations involving AI automation, Generative AI, RAG, AI applications, and intelligent workflows.</p>
+    <div class="buttons">
+      <a href="https://www.linkedin.com/in/caroline-maina-480b74430" target="_blank" class="btn btn-primary">Connect on LinkedIn ↗</a>
+      <a href="https://github.com/carolinemainaprojects" target="_blank" class="btn btn-secondary">Explore GitHub ↗</a>
+      <a href="Caroline_Wanjiku_AI_Automation_CV_Updated.pdf" target="_blank" class="btn btn-secondary">📄 Download CV</a>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Caroline Wanjiku Maina · Built with curiosity, code & AI.</footer>
+</body>
+    </html>
+                                                                                                            
