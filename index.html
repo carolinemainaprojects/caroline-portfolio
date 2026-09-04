@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Caroline Wanjiku Maina — AI Automation & Generative AI Specialist building AI applications, RAG systems and workflow automation.">
+<meta name="description" content="Caroline Wanjiku Maina — AI Automation & Generative AI Specialist | RAG, AI Applications & Workflow Automation">
 
 <title>Caroline Wanjiku Maina | AI Automation & Generative AI Specialist</title>
 
@@ -36,6 +36,7 @@ html {
 body {
     font-family: Inter, ui-sans-serif, system-ui, -apple-system,
     BlinkMacSystemFont, "Segoe UI", sans-serif;
+
     background: var(--bg);
     color: var(--text);
     line-height: 1.65;
@@ -47,9 +48,11 @@ body::before {
     position: fixed;
     inset: 0;
     pointer-events: none;
+
     background:
         radial-gradient(circle at 15% 10%, rgba(139,92,246,.12), transparent 28%),
         radial-gradient(circle at 85% 25%, rgba(34,211,238,.10), transparent 25%);
+
     z-index: -1;
 }
 
@@ -59,23 +62,30 @@ a {
 }
 
 
-/* NAVIGATION */
+/* =========================
+   NAVIGATION
+========================= */
 
 nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+
     z-index: 1000;
-    background: rgba(7,11,20,.78);
+
+    background: rgba(7,11,20,.80);
     backdrop-filter: blur(16px);
+
     border-bottom: 1px solid var(--line);
 }
 
 .nav-container {
     max-width: 1180px;
     margin: auto;
+
     padding: 16px 24px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -107,14 +117,19 @@ nav {
 }
 
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero {
     min-height: 100vh;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     text-align: center;
+
     padding: 130px 24px 80px;
 }
 
@@ -126,28 +141,40 @@ nav {
     display: inline-flex;
     align-items: center;
     gap: 9px;
+
     padding: 8px 15px;
+
     border: 1px solid rgba(110,231,249,.3);
     background: rgba(110,231,249,.06);
+
     border-radius: 999px;
+
     color: var(--accent);
+
     font-size: .82rem;
     font-weight: 700;
+
     margin-bottom: 24px;
 }
 
 .dot {
     width: 7px;
     height: 7px;
+
     border-radius: 50%;
+
     background: var(--accent);
+
     box-shadow: 0 0 14px var(--accent);
 }
 
 .hero h1 {
     font-size: clamp(3rem, 8vw, 6.2rem);
+
     line-height: .98;
+
     letter-spacing: -3px;
+
     margin-bottom: 25px;
 }
 
@@ -158,15 +185,20 @@ nav {
         #c4b5fd,
         var(--accent)
     );
+
     -webkit-background-clip: text;
     background-clip: text;
+
     color: transparent;
 }
 
 .hero .lead {
     max-width: 760px;
+
     margin: auto;
+
     color: var(--muted);
+
     font-size: 1.15rem;
 }
 
@@ -177,215 +209,292 @@ nav {
 .profile-photo img {
     width: 145px;
     height: 145px;
+
     object-fit: cover;
+
     border-radius: 50%;
+
     border: 3px solid rgba(110,231,249,.5);
+
     box-shadow: 0 0 45px var(--glow);
 }
 
 .buttons {
     margin-top: 30px;
+
     display: flex;
     justify-content: center;
+
     gap: 13px;
+
     flex-wrap: wrap;
 }
 
 .btn {
     padding: 12px 20px;
+
     border-radius: 10px;
+
     border: 1px solid rgba(110,231,249,.45);
+
     font-weight: 750;
+
     font-size: .9rem;
+
     transition: .25s;
 }
 
 .btn:hover {
     transform: translateY(-3px);
+
     box-shadow: 0 12px 30px rgba(0,0,0,.25);
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--accent), #67e8f9);
+    background: linear-gradient(
+        135deg,
+        var(--accent),
+        #67e8f9
+    );
+
     color: #061019;
+
     border-color: transparent;
 }
 
 .btn-secondary {
     color: var(--accent);
+
     background: rgba(255,255,255,.02);
 }
 
 
-/* GENERAL SECTIONS */
+/* =========================
+   GENERAL SECTIONS
+========================= */
 
 section {
     max-width: 1180px;
+
     margin: auto;
+
     padding: 95px 24px;
 }
 
 .section-kicker {
     text-align: center;
+
     color: var(--accent);
+
     text-transform: uppercase;
+
     letter-spacing: 2px;
+
     font-size: .75rem;
+
     font-weight: 800;
+
     margin-bottom: 10px;
 }
 
 .section-title {
     text-align: center;
+
     font-size: clamp(2rem, 4vw, 3rem);
+
     letter-spacing: -1px;
+
     margin-bottom: 12px;
 }
 
 .section-subtitle {
     text-align: center;
+
     color: var(--muted);
+
     max-width: 720px;
+
     margin: 0 auto 48px;
 }
 
 
-/* ABOUT */
+/* =========================
+   ABOUT
+========================= */
 
 .about-grid {
     display: grid;
+
     grid-template-columns: 1fr 1.25fr;
+
     gap: 50px;
+
     align-items: center;
 }
 
 .about-card {
-    background: linear-gradient(
-        145deg,
-        rgba(17,27,45,.92),
-        rgba(10,15,27,.92)
-    );
+    background:
+        linear-gradient(
+            145deg,
+            rgba(17,27,45,.92),
+            rgba(10,15,27,.92)
+        );
+
     border: 1px solid var(--line);
+
     border-radius: 22px;
+
     padding: 30px;
 }
 
 .about-card h3 {
     font-size: 1.35rem;
+
     margin-bottom: 12px;
 }
 
 .about-card p {
     color: var(--muted);
+
     margin-bottom: 15px;
 }
 
 .highlight-list {
     display: grid;
+
     gap: 14px;
 }
 
 .highlight {
     padding: 19px;
+
     border: 1px solid var(--line);
+
     border-radius: 15px;
+
     background: rgba(255,255,255,.025);
 }
 
 .highlight strong {
     display: block;
+
     margin-bottom: 4px;
 }
 
 .highlight span {
     color: var(--muted);
+
     font-size: .9rem;
 }
 
 
-/* FEATURED PROJECTS */
+/* =========================
+   FEATURED PROJECTS
+========================= */
 
 .projects {
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
+
     gap: 25px;
 }
 
-
-/*
-IMPORTANT PROJECT CARD ORDER:
-
-1. Project category
-2. Project title
-3. Screenshot
-4. Description
-5. Technologies
-6. Links
-*/
-
 .project-card {
-    background: linear-gradient(160deg, #101a2b, #0b1220);
+    background:
+        linear-gradient(
+            160deg,
+            #101a2b,
+            #0b1220
+        );
+
     border: 1px solid var(--line);
+
     border-radius: 20px;
+
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
+
     transition: .3s;
 }
 
 .project-card:hover {
     transform: translateY(-7px);
+
     border-color: rgba(110,231,249,.5);
-    box-shadow: 0 20px 50px rgba(0,0,0,.3);
-}
 
-.project-content {
-    padding: 27px;
-    display: flex;
-    flex-direction: column;
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.3);
 }
 
 
-/* CATEGORY COMES FIRST */
+/* PROJECT TITLE AREA */
+
+.project-heading {
+    padding: 27px 27px 20px;
+}
 
 .project-number {
     color: var(--accent);
+
     font-size: .76rem;
+
     font-weight: 800;
+
     letter-spacing: 2px;
+
     margin-bottom: 8px;
 }
 
-
-/* TITLE COMES SECOND */
-
 .project-card h3 {
     font-size: 1.45rem;
-    margin-bottom: 20px;
+
+    line-height: 1.3;
 }
 
 
-/* SCREENSHOT COMES THIRD */
+/* SCREENSHOT */
 
 .project-image {
     width: 100%;
+
     height: 270px;
+
     object-fit: cover;
+
     object-position: center;
+
     display: block;
+
     border-top: 1px solid var(--line);
+
     border-bottom: 1px solid var(--line);
+
     background: #0a101c;
 }
 
 
-/* DESCRIPTION FOLLOWS SCREENSHOT */
+/* PROJECT INFORMATION */
+
+.project-info {
+    padding: 24px 27px 27px;
+}
 
 .project-description {
     color: var(--muted);
+
     font-size: .93rem;
-    margin-top: 22px;
-    margin-bottom: 18px;
+
+    margin-bottom: 20px;
+}
+
+.project-label {
+    color: #f8fafc;
+
+    font-size: .84rem;
+
+    font-weight: 750;
+
+    margin-bottom: 10px;
 }
 
 
@@ -393,33 +502,44 @@ IMPORTANT PROJECT CARD ORDER:
 
 .tech {
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 7px;
+
     margin-bottom: 22px;
 }
 
 .tech span {
     padding: 6px 10px;
+
     border-radius: 7px;
+
     background: rgba(148,163,184,.09);
+
     border: 1px solid var(--line);
+
     color: #d8e0ed;
+
     font-size: .76rem;
 }
 
 
-/* LINKS */
+/* PROJECT LINKS */
 
 .project-links {
     display: flex;
+
     gap: 16px;
+
     flex-wrap: wrap;
-    margin-top: auto;
 }
 
 .project-links a {
     color: var(--accent);
+
     font-size: .86rem;
+
     font-weight: 750;
 }
 
@@ -428,86 +548,119 @@ IMPORTANT PROJECT CARD ORDER:
 }
 
 
-/* SERVICES */
+/* =========================
+   SERVICES
+========================= */
 
 .services {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 20px;
 }
 
 .service {
     padding: 28px;
+
     border-radius: 18px;
+
     background: var(--surface);
+
     border: 1px solid var(--line);
+
     transition: .3s;
 }
 
 .service:hover {
     transform: translateY(-5px);
+
     border-color: rgba(139,92,246,.55);
 }
 
 .icon {
     font-size: 1.8rem;
+
     margin-bottom: 14px;
 }
 
 .service h3 {
     font-size: 1.1rem;
+
     margin-bottom: 8px;
 }
 
 .service p {
     color: var(--muted);
+
     font-size: .9rem;
 }
 
 
-/* SKILLS */
+/* =========================
+   SKILLS
+========================= */
 
 .skill-groups {
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
+
     gap: 22px;
 }
 
 .skill-group {
     padding: 25px;
+
     border: 1px solid var(--line);
+
     background: var(--surface);
+
     border-radius: 18px;
 }
 
 .skill-group h3 {
     margin-bottom: 15px;
+
     font-size: 1rem;
 }
 
 .skills {
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 8px;
 }
 
 .skill {
     padding: 6px 10px;
+
     border-radius: 7px;
+
     background: rgba(110,231,249,.045);
+
     border: 1px solid var(--line);
+
     color: #d8e0ed;
+
     font-size: .76rem;
 }
 
 
-/* CONTACT */
+/* =========================
+   CONTACT
+========================= */
 
 .contact-box {
     text-align: center;
+
     padding: 55px 25px;
+
     border-radius: 25px;
+
     border: 1px solid rgba(110,231,249,.2);
+
     background:
         radial-gradient(
             circle at top,
@@ -519,23 +672,33 @@ IMPORTANT PROJECT CARD ORDER:
 
 .contact-box p {
     color: var(--muted);
+
     max-width: 650px;
+
     margin: 0 auto 27px;
 }
 
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer {
     text-align: center;
+
     padding: 28px 20px;
+
     border-top: 1px solid var(--line);
+
     color: #738097;
+
     font-size: .85rem;
 }
 
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:850px) {
 
@@ -564,6 +727,7 @@ footer {
     section {
         padding: 75px 20px;
     }
+
 }
 
 </style>
@@ -573,7 +737,9 @@ footer {
 <body>
 
 
-<!-- NAVIGATION -->
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <nav>
 
@@ -612,20 +778,27 @@ Caroline<span>.</span>
 </nav>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <header class="hero">
 
 <div class="hero-content">
 
 <div class="eyebrow">
+
 <span class="dot"></span>
+
 AI AUTOMATION • GENERATIVE AI • RAG
+
 </div>
+
 
 <h1>
 Caroline Wanjiku Maina
 </h1>
+
 
 <h2
 class="gradient"
@@ -635,6 +808,7 @@ AI Automation & Generative AI Specialist
 
 </h2>
 
+
 <p class="lead">
 
 I build practical AI applications, intelligent workflows,
@@ -642,6 +816,7 @@ and RAG-powered solutions that turn repetitive processes
 and complex information into smarter, more efficient experiences.
 
 </p>
+
 
 <div class="profile-photo">
 
@@ -651,15 +826,26 @@ alt="Caroline Wanjiku Maina">
 
 </div>
 
+
 <div class="buttons">
 
-<a href="#projects" class="btn btn-primary">
+<a
+href="#projects"
+class="btn btn-primary">
+
 Explore My Work
+
 </a>
 
-<a href="#services" class="btn btn-secondary">
+
+<a
+href="#services"
+class="btn btn-secondary">
+
 View Services
+
 </a>
+
 
 <a
 href="https://github.com/carolinemainaprojects"
@@ -669,6 +855,7 @@ class="btn btn-secondary">
 GitHub ↗
 
 </a>
+
 
 <a
 href="https://www.linkedin.com/in/caroline-maina-480b74430"
@@ -686,7 +873,9 @@ LinkedIn ↗
 </header>
 
 
-<!-- ABOUT -->
+<!-- =========================
+     ABOUT
+========================= -->
 
 <section id="about">
 
@@ -694,16 +883,20 @@ LinkedIn ↗
 Who I Am
 </div>
 
+
 <h2 class="section-title">
 Building AI that works in the real world.
 </h2>
+
 
 <p class="section-subtitle">
 From an idea and a business problem to a working,
 user-focused AI solution.
 </p>
 
+
 <div class="about-grid">
+
 
 <div class="about-card">
 
@@ -711,18 +904,21 @@ user-focused AI solution.
 About Me
 </h3>
 
+
 <p>
-I’m an emerging AI Automation and Generative AI professional
+I am an emerging AI Automation and Generative AI professional
 passionate about using artificial intelligence and technology
 to develop practical solutions that improve how people and
 organizations work.
 </p>
+
 
 <p>
 I have hands-on experience in Python, Generative AI, APIs,
 prompt engineering, workflow automation, AI application
 development, document processing, databases, and RAG systems.
 </p>
+
 
 <p>
 I enjoy turning real-world problems into structured AI workflows
@@ -733,6 +929,7 @@ that connect data, models, applications, and automation.
 
 
 <div class="highlight-list">
+
 
 <div class="highlight">
 
@@ -789,6 +986,7 @@ development, testing, and deployment.
 
 </div>
 
+
 </div>
 
 </div>
@@ -796,7 +994,9 @@ development, testing, and deployment.
 </section>
 
 
-<!-- SERVICES -->
+<!-- =========================
+     SERVICES
+========================= -->
 
 <section id="services">
 
@@ -804,21 +1004,26 @@ development, testing, and deployment.
 What I Offer
 </div>
 
+
 <h2 class="section-title">
 Services
 </h2>
+
 
 <p class="section-subtitle">
 Practical AI and automation services designed around
 real business workflows.
 </p>
 
+
 <div class="services">
 
 
 <div class="service">
 
-<div class="icon">⚙️</div>
+<div class="icon">
+⚙️
+</div>
 
 <h3>
 AI Workflow Automation
@@ -834,7 +1039,9 @@ work and connect business tools into efficient processes.
 
 <div class="service">
 
-<div class="icon">🤖</div>
+<div class="icon">
+🤖
+</div>
 
 <h3>
 Generative AI Integration
@@ -851,7 +1058,9 @@ and content generation.
 
 <div class="service">
 
-<div class="icon">🔎</div>
+<div class="icon">
+🔎
+</div>
 
 <h3>
 RAG & Knowledge Solutions
@@ -867,7 +1076,9 @@ information and generate grounded answers from knowledge bases.
 
 <div class="service">
 
-<div class="icon">💻</div>
+<div class="icon">
+💻
+</div>
 
 <h3>
 AI Application Development
@@ -883,7 +1094,9 @@ from concept through deployment.
 
 <div class="service">
 
-<div class="icon">🔗</div>
+<div class="icon">
+🔗
+</div>
 
 <h3>
 API & System Integration
@@ -899,7 +1112,9 @@ and other systems to create connected workflows.
 
 <div class="service">
 
-<div class="icon">📄</div>
+<div class="icon">
+📄
+</div>
 
 <h3>
 Document Intelligence
@@ -912,12 +1127,15 @@ and turn unstructured data into actionable outputs.
 
 </div>
 
+
 </div>
 
 </section>
 
 
-<!-- FEATURED PROJECTS -->
+<!-- =========================
+     FEATURED PROJECTS
+========================= -->
 
 <section id="projects">
 
@@ -925,9 +1143,11 @@ and turn unstructured data into actionable outputs.
 Selected Work
 </div>
 
+
 <h2 class="section-title">
 Featured Projects
 </h2>
+
 
 <p class="section-subtitle">
 Hands-on AI solutions designed, built, tested, and deployed.
@@ -937,11 +1157,16 @@ Hands-on AI solutions designed, built, tested, and deployed.
 <div class="projects">
 
 
-<!-- PROJECT 1 -->
+<!-- =========================
+     PROJECT 1
+========================= -->
 
 <div class="project-card">
 
-<div class="project-content">
+
+<!-- CATEGORY + TITLE FIRST -->
+
+<div class="project-heading">
 
 <div class="project-number">
 01 / AI APPLICATION
@@ -953,18 +1178,32 @@ AI Resume Screener
 
 </div>
 
+
+<!-- SCREENSHOT SECOND -->
+
 <img
 src="Screenshot_2026-08-30-00-00-54-12_40deb401b9ffe8e1df2f1cc5ba480b12.jpg"
 alt="AI Resume Screener application screenshot"
 class="project-image">
 
-<div class="project-content">
+
+<!-- EXPLANATION + REST -->
+
+<div class="project-info">
 
 <p class="project-description">
+
 An AI-powered recruitment assistant that analyzes resumes
 against job requirements, extracts relevant information,
 and generates useful recruitment insights.
+
 </p>
+
+
+<div class="project-label">
+Technologies Used
+</div>
+
 
 <div class="tech">
 
@@ -975,6 +1214,7 @@ and generates useful recruitment insights.
 <span>APIs</span>
 
 </div>
+
 
 <div class="project-links">
 
@@ -1005,11 +1245,16 @@ GitHub →
 </div>
 
 
-<!-- PROJECT 2 -->
+<!-- =========================
+     PROJECT 2
+========================= -->
 
 <div class="project-card">
 
-<div class="project-content">
+
+<!-- CATEGORY + TITLE FIRST -->
+
+<div class="project-heading">
 
 <div class="project-number">
 02 / AI PRODUCTIVITY
@@ -1021,18 +1266,32 @@ AI Meeting Summarizer & Action Tracker
 
 </div>
 
+
+<!-- SCREENSHOT SECOND -->
+
 <img
 src="Screenshot_2026-08-30-00-23-25-22_40deb401b9ffe8e1df2f1cc5ba480b12.jpg"
 alt="AI Meeting Summarizer application screenshot"
 class="project-image">
 
-<div class="project-content">
+
+<!-- EXPLANATION + REST -->
+
+<div class="project-info">
 
 <p class="project-description">
+
 An AI-powered meeting assistant that transforms meeting notes
 into structured summaries, decisions, action items, responsible
 team members, and deadlines.
+
 </p>
+
+
+<div class="project-label">
+Technologies Used
+</div>
+
 
 <div class="tech">
 
@@ -1043,6 +1302,7 @@ team members, and deadlines.
 <span>APIs</span>
 
 </div>
+
 
 <div class="project-links">
 
@@ -1073,11 +1333,16 @@ GitHub →
 </div>
 
 
-<!-- PROJECT 3 -->
+<!-- =========================
+     PROJECT 3
+========================= -->
 
 <div class="project-card">
 
-<div class="project-content">
+
+<!-- CATEGORY + TITLE FIRST -->
+
+<div class="project-heading">
 
 <div class="project-number">
 03 / AI AUTOMATION
@@ -1089,18 +1354,32 @@ AI Sales CRM Assistant
 
 </div>
 
+
+<!-- SCREENSHOT SECOND -->
+
 <img
 src="Screenshot_2026-08-30-00-38-18-86_40deb401b9ffe8e1df2f1cc5ba480b12.jpg"
 alt="AI Sales CRM Assistant application screenshot"
 class="project-image">
 
-<div class="project-content">
+
+<!-- EXPLANATION + REST -->
+
+<div class="project-info">
 
 <p class="project-description">
+
 An AI-powered CRM assistant that captures leads, stores lead
 information, qualifies opportunities, and helps prioritize
 prospects using AI-generated insights.
+
 </p>
+
+
+<div class="project-label">
+Technologies Used
+</div>
+
 
 <div class="tech">
 
@@ -1111,6 +1390,7 @@ prospects using AI-generated insights.
 <span>PostgreSQL</span>
 
 </div>
+
 
 <div class="project-links">
 
@@ -1141,11 +1421,16 @@ GitHub →
 </div>
 
 
-<!-- PROJECT 4 -->
+<!-- =========================
+     PROJECT 4
+========================= -->
 
 <div class="project-card">
 
-<div class="project-content">
+
+<!-- CATEGORY + TITLE FIRST -->
+
+<div class="project-heading">
 
 <div class="project-number">
 04 / RAG SYSTEM
@@ -1157,153 +1442,40 @@ AI Research & Knowledge Agent
 
 </div>
 
+
+<!-- SCREENSHOT SECOND -->
+
 <img
-src="Screenshot_2026-08-31-16-10-39-83_40deb401b9ffe8e1df2f1cc5ba480b12.jpg"
+src="Screenshot_2026-08-31-02-23-35-52_40deb401b9ffe8e1df2f1cc5ba480b12.jpg"
 alt="AI Research and Knowledge Agent application screenshot"
 class="project-image">
 
-<div class="project-content">
+
+<!-- EXPLANATION + REST -->
+
+<div class="project-info">
 
 <p class="project-description">
+
 A Retrieval-Augmented Generation application that processes
 documents, retrieves relevant information using semantic search,
 and generates evidence-supported answers using retrieved context.
+
 </p>
+
+
+<div class="project-label">
+Technologies Used
+</div>
+
 
 <div class="tech">
 
 <span>Python</span>
-<span>RAG</span>
 <span>FAISS</span>
+<span>RAG</span>
 <span>Embeddings</span>
 <span>Gemini AI</span>
 <span>Streamlit</span>
-
-</div>
-
-<div class="project-links">
-
-<a href="ai-research-agent.
-Case Study →
-</a>
-
-<a
-href="https://ai-research-knowledge-agent-jvmefkcrldnsvuahdwzwxa.streamlit.app/"
-target="
-
-Live Demo →
-
-</a>
-
-<a
-href="https://github.com/carolinemainaprojects/AI-Research-Knowledge-Agent"
-target="_blank">
-
-GitHub →
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-<!-- SKILLS -->
-
-<section id="skills">
-
-<div class="section-kicker">
-My Toolkit
-</div>
-
-<h2 class="section-title">
-Skills & Technologies
-</h2>
-
-<p class="section-subtitle">
-Technologies I use to design, build, integrate, and deploy
-AI solutions.
-</p>
-
-
-<div class="skill-groups">
-
-
-<div class="skill-group">
-
-<h3>
-🤖 AI Automation & Generative AI
-</h3>
-
-<div class="skills">
-
-<span class="skill">AI Automation</span>
-<span class="skill">Generative AI</span>
-<span class="skill">LLMs</span>
-<span class="skill">Prompt Engineering</span>
-<span class="skill">Workflow Automation</span>
-<span class="skill">Structured AI Outputs</span>
-
-</div>
-
-</div>
-
-
-<div class="skill-group">
-
-<h3>
-🧠 RAG & AI Systems
-</h3>
-
-<div class="skills">
-
-<span class="skill">RAG</span>
-<span class="skill">FAISS</span>
-<span class="skill">Embeddings</span>
-<span class="skill">Semantic Search</span>
-<span class="skill">Document Processing</span>
-<span class="skill">Hallucination Testing</span>
-
-</div>
-
-</div>
-
-
-<div class="skill-group">
-
-<h3>
-💻 Development
-</h3>
-
-<div class="skills">
-
-<span class="skill">Python</span>
-<span class="skill">Streamlit</span>
-<span class="skill">Git & GitHub</span>
-<span class="skill">JSON</span>
-<span class="skill">Application Development</span>
-
-</div>
-
-</div>
-
-
-<div class="skill-group">
-
-<h3>
-🔗 APIs & Data
-</h3>
-
-<div class="skills">
-
-<span class="skill">REST APIs</span>
-<span class="skill">API Integration</span>
-<span class="skill">Google Sheets</span>
-<span 
+<span>Document Processing</span>
+<span>Vector Search</spa
