@@ -517,12 +517,14 @@ IMPORTANT PROJECT CARD ORDER:
         var(--surface);
 }
 
-.contact-box p {
-    color: var(--muted);
-    max-width: 650px;
-    margin: 0 auto 27px;
+.contact-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;        /* Prevents overlapping on small screens */
+    justify-content: center;/* Centers the list of buttons */
+    gap: 15px;              /* Standard spacing between buttons */
 }
-
+    
 
 /* FOOTER */
 
