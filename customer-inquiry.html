@@ -1,1 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>AI Customer Inquiry & Lead Prioritization Automation | Caroline Maina</title>
+
+    <style>
+        :root {
+            --bg: #0b0f14;
+            --card: #111821;
+            --text: #f5f7fa;
+            --muted: #aab4c0;
+            --accent: #7c5cff;
+            --border: #24303d;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        header {
+            padding: 25px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .back-link {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .back-link:hover {
+            color: var(--text);
+        }
+
+        .hero {
+            padding: 80px 0 50px;
+        }
+
+        .project-number {
+            color: var(--accent);
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 46px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .intro {
+            max-width: 760px;
+            color: var(--muted);
+            font-size: 18px;
+        }
+
+        .section {
+            margin: 50px 0;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 18px;
+        }
+
+        h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: var(--muted);
+            margin-bottom: 15px;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 30px;
+            margin-top: 20px;
+        }
+
+        .workflow {
+            display: grid;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .workflow-step {
+            background: #151e28;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .workflow-step strong {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--text);
+        }
+
+        .tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .tech span {
+            padding: 8px 14px;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .results {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .result {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .result strong {
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin: 30px 0 60px;
+            padding: 12px 20px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+        }
+
+        .back-button:hover {
+            border-color: var(--accent);
+        }
+
+        @media (max-width: 700px) {
+            h1 {
+                font-size: 34px;
+            }
+
+            .results {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding-top: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Portfolio</a>
+    </div>
+</header>
+
+<main>
+
+    <section class="hero">
+        <div class="container">
+
+            <div class="project-number">
+                05 / AI WORKFLOW AUTOMATION
+            </div>
+
+            <h1>
+                AI Customer Inquiry & Lead Prioritization Automation
+            </h1>
+
+            <p class="intro">
+                An AI-powered workflow automation that captures customer inquiries,
+                analyzes and classifies leads, assigns priority scores, generates
+                AI summaries, and automatically stores structured lead information
+                in Google Sheets.
+            </p>
+
+        </div>
+    </section>
+
+
+    <section class="section">
+        <div class="container">
+
+            <h2>The Challenge</h2>
+
+            <div class="card">
+
+                <p>
+                    Businesses can receive many customer inquiries through forms,
+                    websites, and other channels. Manually reviewing each inquiry,
+                    determining its category, deciding its priority, and recording
+                    the information can become repetitive and time-consuming.
+                </p>
+
+                <p>
+                    The goal of this project was to automate that process so that
+                    incoming inquiries could be analyzed and organized automatically.
+                </p>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="section">
+        <div class="container">
+
+            <h2>The Solution</h2>
+
+            <div class="card">
+
+                <p>
+                    I designed an automated AI workflow that connects Google Forms,
+                    Make, Gemini AI, and Google Sheets.
+                </p>
+
+                <p>
+                    When a customer submits an inquiry, the workflow automatically
+                    sends the information for AI analysis, classifies the inquiry,
+                    determines its priority, generates a lead score and summary,
+                    and records the structured result in Google Sheets.
+                </p>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="section">
+        <div class="container">
+
+            <h2>How the Automation Works</h2>
+
+            <div class="workflow">
+
+                <div class="workflow-step">
+                    <strong>01 — Customer Inquiry</strong>
+                    A customer submits their name, email address, and inquiry
+                    through a Google Form.
+                </div>
+
+                <div class="workflow-step">
+                    <strong>02 — Automation Trigger</strong>
+                    Make detects the new form submission and starts the workflow.
+                </div>
+
+                <div class="workflow-step">
+                    <strong>03 — AI Analysis</strong>
+                    Gemini AI analyzes the customer inquiry and determines the
+                    appropriate category and priority.
+                </div>
+
+                <div class="workflow-step">
+                    <strong>04 — Lead Scoring</strong>
+                    The workflow generates a lead score based on the inquiry.
+                </div>
+
+                <div class="workflow-step">
+                    <strong>05 — AI Summary</strong>
+                    Gemini generates a concise summary of the customer's inquiry.
+                </div>
+
+                <div class="workflow-step">
+                    <strong>06 — Data Storage</strong>
+                    The structured lead information is automatically recorded
+                    in Google Sheets.
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="section">
+        <div class="container">
+
+            <h2>AI Processing</h2>
+
+            <div class="card">
+
+                <p>
+                    Gemini AI is used to interpret the customer's inquiry and
+                    transform unstructured text into structured information.
+                </p>
+
+                <p>
+                    The workflow identifies the inquiry category, determines
+                    priority, generates a lead score, and produces an AI-generated
+                    summary that can be used for faster follow-up.
+                </p>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="section">
+        <div class="container">
+
+            <h2>Lead Information Generated</h2>
+
+            <div class="results">
+
+                <div class="result">
+                    <strong>Customer Name</strong>
+                    <p>Customer identification information.</p>
+                </div>
+
+                <div class="result">
+                    <strong>Email Address</strong>
+                    <p>Contact information for follow-up.</p>
+                </div>
+
+                <div class="result">
+                    <strong>Customer Inquiry</strong>
+                    <p>The original customer request.</p>
+                </div>
+
+                <div class="result">
+                    <strong>Inquiry Category</strong>
+                    <p>AI-generated classification of the inquiry.</p>
+                </div>
+
+                <div class="result">
+                    <strong>Priority Level</strong>
+                    <p>AI-generated priority classification.</p>
+                </div>
+
+                <div class="result">
+                    <strong>Lead Score</strong>
+                    <p>A numerical indication of lead priority.</p>
+                </div>
+
+                <div class="result">
+                    <strong>AI Summary</strong>
+                    <p>A concise summary generated from the inquiry.</p>
+                </div>
+
+                <div class="result">
+                    <strong>Submission Time</strong>
+                    <p>The time the inquiry was submitted.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="section">
+        <div class="container">
+
+            <h2>Business Value</h2>
+
+            <div class="card">
+
+                <p>
+                    This automation reduces repetitive manual data entry and
+                    creates a consistent process for handling incoming inquiries.
+                </p>
+
+                <p>
+                    By automatically prioritizing leads and organizing customer
+                    information, businesses can identify high-priority prospects
+                    faster and improve follow-up efficiency.
+                </p>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="section">
+        <div class="container">
+
+            <h2>Technologies</h2>
+
+            <div class="tech">
+                <span>Google Forms</span>
+                <span>Make</span>
+                <span>Gemini AI</span>
+                <span>Google Sheets</span>
+                <span>Workflow Automation</span>
+                <span>AI Classification</span>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="section">
+        <div class="container">
+
+            <h2>Result</h2>
+
+            <div class="card">
+
+                <p>
+                    The completed workflow automatically transforms a customer
+                    inquiry into a structured, prioritized lead record without
+                    requiring the information to be manually processed at every
+                    stage.
+                </p>
+
+                <p>
+                    This demonstrates how AI and workflow automation can be
+                    combined to streamline repetitive business processes and
+                    support faster lead management.
+                </p>
+
+            </div>
+
+            <a href="index.html" class="back-button">
+                ← Back to Portfolio
+            </a>
+
+        </div>
+    </section>
+
+</main>
+
+</body>
+  </html>
